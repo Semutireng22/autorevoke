@@ -1,0 +1,46 @@
+{
+  "name": "autorevoke",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "contracts:compile": "cd contracts && npx hardhat compile",
+    "contracts:test": "cd contracts && npx hardhat test",
+    "contracts:deploy": "ts-node --transpile-only scripts/deploy-contracts.ts",
+    "indexer": "ts-node --transpile-only apps/indexer-mock/server.ts",
+    "guardian": "ts-node --transpile-only apps/guardian/guardian.ts",
+    "web": "cd apps/web && next dev",
+    "seed": "ts-node --transpile-only scripts/fill-demo-data.ts",
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "hardhat": "^2.22.1",
+    "pino": "^8.17.0",
+    "viem": "^1.21.3"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.7",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^15.0.0-canary.52",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsdoc": "^48.2.12",
+    "eslint-plugin-jsonc": "^2.9.0",
+    "eslint-plugin-react": "^7.34.1",
+    "next": "15.0.0-canary.52",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.2",
+    "globals": "^15.2.0"
+  }
+}
