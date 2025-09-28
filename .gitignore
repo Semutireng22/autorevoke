@@ -1,0 +1,10 @@
+node_modules
+.cache
+artifacts
+cache
+.env
+.deploy.json
+dist
+coverage
+.next
+out
